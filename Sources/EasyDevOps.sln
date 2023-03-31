@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyDevOps.Console", "EasyDevOps.Console\EasyDevOps.Console.csproj", "{6FADEA6C-3DCD-46BC-8981-F3EF37579F15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyDevOps.Core", "EasyDevOps.Core\EasyDevOps.Core.csproj", "{7C73DD72-E3C4-4688-9111-74BCAE2637E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FADEA6C-3DCD-46BC-8981-F3EF37579F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FADEA6C-3DCD-46BC-8981-F3EF37579F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FADEA6C-3DCD-46BC-8981-F3EF37579F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FADEA6C-3DCD-46BC-8981-F3EF37579F15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C73DD72-E3C4-4688-9111-74BCAE2637E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C73DD72-E3C4-4688-9111-74BCAE2637E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C73DD72-E3C4-4688-9111-74BCAE2637E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C73DD72-E3C4-4688-9111-74BCAE2637E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2648294-EEF1-4B0A-ABF1-EC12086887EB}
+	EndGlobalSection
+EndGlobal
