@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace EasyDevOps.Core
@@ -7,9 +8,11 @@ namespace EasyDevOps.Core
     {
         private readonly IConfigurationProvider<SchedullerRule> configurationProvider;
         private readonly ILogger? logger;
+        private CancellationToken cancellationToken;
 
         public Scheduller(IConfigurationProvider<SchedullerRule> configurationProvider)
         {
+            cancellationToken = CancellationToken.None;
             this.configurationProvider = configurationProvider;
         }
 
@@ -19,7 +22,7 @@ namespace EasyDevOps.Core
             this.logger = logger;
         }
 
-        public Task StartAsync()
+        public Task StartAsync(CancellationToken token = default)
         {
             throw new NotImplementedException();
         }

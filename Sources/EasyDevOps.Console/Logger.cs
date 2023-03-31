@@ -18,7 +18,7 @@ namespace EasyDevOps.Console
             Serilog.Log.Information(message);
             if (!string.IsNullOrWhiteSpace(outputFilePath))
             {
-                string text = string.Format("[INFO] {0} - {1}", DateTime.Now, message);
+                string text = string.Format("[INFO] {0} - {1}{2}", DateTime.Now, message, Environment.NewLine);
                 File.AppendAllText(outputFilePath, text);
             }
         }
@@ -28,7 +28,7 @@ namespace EasyDevOps.Console
             Serilog.Log.Error(exception, message);
             if (!string.IsNullOrWhiteSpace(outputFilePath))
             {
-                string text = string.Format("[ERROR] {0} - {1} - {2}", DateTime.Now, exception.Message, message);
+                string text = string.Format("[ERROR] {0} - {1} - {2}{3}", DateTime.Now, exception.Message, message, Environment.NewLine);
                 File.AppendAllText(outputFilePath, text);
             }
         }

@@ -14,9 +14,13 @@ namespace EasyDevOps.Console
 
         private static async Task StartApplicationAsync(Options options)
         {
-            ConfigurationProvider configurationProvider = new(options);
+            CancellationTokenSource cancellationTokenSource = new();
+            System.Console.CancelKeyPress += (sender, args) => cancellationTokenSource.Cancel();
+            ConfigurationProvider configurationProvider = new(options.Interval, options.ConfigurationFilePath);
+            Logger logger = string.IsNullOrWhiteSpace(options.LogOutputFilePath) ?
+                new() : new(options.LogOutputFilePath);
             Scheduller scheduller = new(configurationProvider);
-            await scheduller.StartAsync();
+            await scheduller.StartAsync(cancellationTokenSource.Token);
         }
     }
 }
